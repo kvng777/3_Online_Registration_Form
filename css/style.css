@@ -1,0 +1,244 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+header,
+.sub-header
+form,
+fieldset,
+.newsletter,
+footer {
+    display: flex;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin-top:2em;
+}
+
+input[name="contact_information"]::placeholder {
+    text-align:right;
+    color:rgb(175, 174, 174);
+    font-style: italic;
+    padding-right: .5em;
+}
+
+form input[name="contact_information"]:focus,
+form select:focus,
+form textarea:focus {
+    border: 2px solid green;
+    outline: 0;
+    -webkit-transition: all .3s ease-out;
+}
+
+.sub-header hr {
+    border: 2px solid black;
+    border-top: 5px solid black;
+    border-left: 0;
+    border-right: 0;
+    height: .2em;
+    margin: 1em 0 1.5em 0;
+}
+
+fieldset hr {
+    width: 100%;
+    border: 2px solid black;
+    margin: 0.5em 0 0 0;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 10em;
+    color: grey;
+}
+
+
+button{
+    max-width: 764px;
+}
+/* 
+select {
+      -webkit-appearance: none;
+  appearance: none;
+} */
+/* MOBILE View Port @360px */
+@media (min-width: 360px) {
+
+    form {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+        header h1{
+            justify-content: center;
+            display: flex;
+            padding: 1em 0 1em 0;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: x-large;
+            background-color: tomato;
+            width:100%;
+        }
+            .sub-header{
+                text-align: center;
+            }
+            .sub-header p {
+                color: rgb(194, 194, 194);
+                margin-bottom: 3em;
+            }
+            .sub-header h2 {
+                margin-top: 1.5em;
+            }
+
+        fieldset p {
+            margin-bottom: .5em;
+        }
+        form legend{
+            margin: 1em 0 1em 0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        form label{
+            margin-bottom: 1em;
+            color: grey;
+            display: block;
+        }
+    
+    input[type="name"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="text"],
+    select {
+        border-radius: 5px;
+        height: 4em;
+        padding: 5px 10px 5px 10px;
+        background-color: rgb(230, 230, 230);
+        border: 0;
+    }
+
+    input,
+    select,
+    textarea {
+        background-color: rgb(230, 230, 230);
+        border: 0;
+        border-radius: 5px;
+    }
+    fieldset,
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .groupies label,
+    .groupies input,
+    .groupies select{
+        display: block;
+        width: 100%;
+    }
+
+    input[id="zip_code"] {
+        width: 50%;
+    }
+
+    input,
+    select{
+        margin-bottom: 1.5em;
+    }
+
+    textarea {
+        height: 7em;
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+    }
+
+    button {
+        border: 0;
+        background-color: rgb(64, 219, 186);
+        border-radius: 5px;
+        color: white;
+        margin: 1.5em 0 1.5em 0;
+        height: 3em;
+        font-size: x-large;
+        transition: .3s ease;
+
+    }
+
+    select:invalid { 
+        color:rgb(175, 174, 174);
+    }
+
+    .select_newsletter ul,
+    .newsletter_format ul {
+        margin: 1em 0 1em 0;
+    }
+
+        li  input{
+            margin-right: .5em;
+        }
+
+    footer span{
+        flex: auto;
+    }
+}
+
+/* DESKTOP View Port @768px */
+@media (min-width: 768px) {
+
+    form,
+    footer{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .groupies {
+        display: flex;
+        flex: 1;
+    }
+
+    .groupies label{
+        width: 23%;
+        display: flex;
+        align-items: center;
+        height: 3em;
+    }
+
+    .groupies input,
+    .groupies select {
+        width: 77%;
+    }
+    
+    input[id="zip_code"] {
+        width: 25%;
+    }
+
+    .sub-header hr{
+        margin-bottom: 3em;
+    }
+
+    .sub-header h2{
+        margin-top: 2em;
+    }
+
+    fieldset hr {
+        margin: 2em 0 1em 0;
+    }
+
+    button {
+        margin: 1.5em 0 2em 0;
+    }
+
+    button:hover {
+        transform: scale(1.2);
+        transition: all .5s ease;
+    }
+
+    footer{
+        margin-bottom: 10em;
+    }
+
+}

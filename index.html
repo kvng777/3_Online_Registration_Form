@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <Title>The Code Review</Title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1 class="heading">The Code Review</h1> 
+        </header>
+    
+        <form>
+            <div class="sub-header">
+                <h2>Signup for our newsletter</h2>
+                <p>Get the latest news on how your code is doing right in your inbox</p>
+                <hr>    
+            </div>    
+          
+                <fieldset>
+                    
+                    <legend>Contact Information</legend>
+                            <div class="groupies">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="contact_information" placeholder="Required" required>         
+                            </div>
+
+                            <div class="groupies">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="contact_information" placeholder="Required" required>         
+                            </div>    
+
+                            <div class="groupies">
+                                <label for="number">Phone Number</label>
+                                <input type="tel" id="number" name="contact_information" pattern="[0-9]" pattern="[11]" title="Atleast 11 numbers">
+                            </div>
+                            
+                            <div class="groupies">
+                                <label for="stree_address">Street Address</label>
+                                <input type="text" id="stree_address" name="contact_information">
+                            </div>
+
+                            <div class="groupies">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="contact_information">                  
+                            </div>
+
+                            <div class="groupies">
+                                <label for="choose_state">State</label>
+                                <select name="state" id="choose_state" required>
+                                    <option hidden disabled selected value="">Choose State</option>
+                                    <option value="Beijing"  id="beijing">Beijing</option>
+                                    <option value="Shanghai"  id="shanghai">Shanghai</option>
+                                    <option value="Chengdu"  id="chengdu">Chengdu</option>
+                                    <option value="Shenzhen"  id="shenzhen">Shenzhen</option>
+                                    <option value="Guangzhou" id="guangzhou">Guangzhou</option>
+                                </select>
+                            </div>
+
+                            <div class="groupies">
+                                <label for="zip_code">Zip Code</label>
+                                <input type="text" id="zip_code" name="contact_information" placeholder="AB12345">
+                            </div>
+
+                    <hr>
+                    </fieldset>
+
+                    <fieldset>
+                        <Legend>Newsletter</Legend>
+                        <div class="newsletter">
+                                <div class="select_newsletter">
+                                    <label>Select the newsletter you would like to receive</label>
+                                        <ul class="select_type">
+                                            <li><label for="html_news"><input type="checkbox" id="html_news" value="newsletter_html" name="newsletter"> HTML News</label></li>
+                                            <li><label for="css_news"><input type="checkbox" id="css_news" value="newsletter_css" name="newsletter"> CSS News</label></li>
+                                            <li><label for="js_news"><input type="checkbox" id="js_news" value="newsletter_js" name="newsletter"> Javascript News</label></li>
+                                        </ul>
+                                </div>
+
+                                <div class="newsletter_format">
+                                    <label>Newsletter Format</label>
+                                        <ul class="format_type">
+                                            <li><label for="format_html"><input type="radio" id="format_html" value="format_html" name="newsletter_format"> HTML</label></li>
+                                            <li><label for="format_plaintxt"><input type="radio" id="format_plaintxt" value="format_plaintxt" name="newsletter_format"> Plain Text</label></li>
+                                        </ul>
+                                        
+                                        <div class="comment">
+                                            <label for="comments">Other topics you would like to hear about</label>
+                                            <textarea name="user_comments" id="comments"></textarea>    
+                                        </div>
+                                </div>
+
+                                <button>Sign Up</button>
+                        </div>
+                    </fieldset>
+
+                
+        </form>
+
+
+    <footer><span> &copy;<i> Copyright Kevin Gamboa 2020</i></span></footer>
+
+</body>
+</html>
