@@ -12,29 +12,10 @@ header,
 form,
 fieldset,
 .newsletter,
+.select-icon1,
+.select-icon2,
 footer {
     display: flex;
-}
-
-fieldset {
-    border: 0;
-    padding: 0;
-    margin-top:2em;
-}
-
-input[name="contact_information"]::placeholder {
-    text-align:right;
-    color:rgb(175, 174, 174);
-    font-style: italic;
-    padding-right: .5em;
-}
-
-form input[name="contact_information"]:focus,
-form select:focus,
-form textarea:focus {
-    border: 2px solid green;
-    outline: 0;
-    -webkit-transition: all .3s ease-out;
 }
 
 .sub-header hr {
@@ -44,6 +25,12 @@ form textarea:focus {
     border-right: 0;
     height: .2em;
     margin: 1em 0 1.5em 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin-top:2em;
 }
 
 fieldset hr {
@@ -58,15 +45,35 @@ footer{
     color: grey;
 }
 
-
 button{
     max-width: 764px;
 }
-/* 
+
 select {
-      -webkit-appearance: none;
-  appearance: none;
-} */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Input Styling */
+input[name="contact_information"]::placeholder {
+    text-align:right;
+    color:rgb(175, 174, 174);
+    font-style: italic;
+    padding-right: .5em;
+}
+
+input[id="zip_code"]::placeholder{
+    text-align: left;
+}
+
+form input[name="contact_information"]:focus,
+form select:focus,
+form textarea:focus {
+    border: 2px solid green;
+    outline: 0;
+}
+
+
 /* MOBILE View Port @360px */
 @media (min-width: 360px) {
 
@@ -82,7 +89,7 @@ select {
             text-transform: uppercase;
             font-weight: 600;
             font-size: x-large;
-            background-color: tomato;
+            background-color: thistle;
             width:100%;
         }
             .sub-header{
@@ -105,7 +112,6 @@ select {
             font-weight: 600;
         }
         form label{
-            margin-bottom: 1em;
             color: grey;
             display: block;
         }
@@ -122,6 +128,31 @@ select {
         border: 0;
     }
 
+    .select-icon1{
+        position: relative;
+    }
+    
+    .select-icon2{
+        position: relative;
+    }
+        .select-icon1::after{
+            content: "▼";
+            font-size: 0.8rem;
+            top: 32px;
+            right: 10px;
+            position: absolute;
+            color:grey;
+        }
+        .select-icon2::after{
+            content: "▲";
+            font-size: 0.8rem;
+            top: 16px;
+            right: 10px;
+            position: absolute;
+            color:grey;
+        }
+    
+
     input,
     select,
     textarea {
@@ -136,7 +167,9 @@ select {
 
     .groupies label,
     .groupies input,
-    .groupies select{
+    .groupies select,
+    .groupies .select-icon1,
+    .groupies .select-icon2{
         display: block;
         width: 100%;
     }
@@ -148,12 +181,14 @@ select {
     input,
     select{
         margin-bottom: 1.5em;
+        margin-top: .5em;
     }
 
     textarea {
         height: 7em;
         width: 100%;
         padding: 5px 10px 5px 10px;
+        margin-top: 1em;
     }
 
     button {
@@ -195,23 +230,29 @@ select {
         margin: 0 auto;
     }
 
+    .select-icon1::after{
+        top: 39px;
+    }
+    .select-icon2::after{
+        top: 15px;
+    }
+
     .groupies {
         display: flex;
-        flex: 1;
     }
 
     .groupies label{
-        width: 23%;
+        max-width: 23%;
         display: flex;
         align-items: center;
-        height: 3em;
-    }
-
-    .groupies input,
-    .groupies select {
-        width: 77%;
+        height: 5em;
     }
     
+    .newsletter li label{
+        height: 2em;
+    }
+
+
     input[id="zip_code"] {
         width: 25%;
     }
