@@ -142,6 +142,7 @@ form textarea:focus {
             right: 10px;
             position: absolute;
             color:grey;
+            pointer-events: none;
         }
         .select-icon2::after{
             content: "▲";
@@ -150,6 +151,7 @@ form textarea:focus {
             right: 10px;
             position: absolute;
             color:grey;
+            pointer-events: none;
         }
     
 

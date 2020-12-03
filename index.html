@@ -37,7 +37,7 @@
 
                             <div class="groupies">
                                 <label for="number">Phone Number</label>
-                                <input type="tel" id="number" name="contact_information" pattern="[0-9]" pattern="[11]" title="Atleast 11 numbers">
+                                <input type="tel" id="number" name="contact_information" maxlength="11" pattern="[0-9]+" title="Please enter numbers, with a maxium of 11 digits only.">
                             </div>
                             
                             <div class="groupies">
@@ -98,14 +98,10 @@
                                             <textarea name="user_comments" id="comments"></textarea>    
                                         </div>
                                 </div>
-
                                 <button>Sign Up</button>
                         </div>
-                    </fieldset>
-
-                
+                    </fieldset>              
         </form>
-
 
     <footer><span> &copy;<i> Copyright Kevin Gamboa 2020</i></span></footer>
 
