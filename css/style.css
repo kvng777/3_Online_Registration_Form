@@ -154,7 +154,6 @@ form textarea:focus {
             pointer-events: none;
         }
     
-
     input,
     select,
     textarea {
@@ -195,7 +194,7 @@ form textarea:focus {
 
     button {
         border: 0;
-        background-color: rgb(64, 219, 186);
+        background-color: rgb(86, 157, 250);
         border-radius: 5px;
         color: white;
         margin: 1.5em 0 1.5em 0;
@@ -213,7 +212,6 @@ form textarea:focus {
     .newsletter_format ul {
         margin: 1em 0 1em 0;
     }
-
         li  input{
             margin-right: .5em;
         }
@@ -268,7 +266,7 @@ form textarea:focus {
     }
 
     fieldset hr {
-        margin: 2em 0 1em 0;
+        margin: 1.5em 0 0 0;
     }
 
     button {
