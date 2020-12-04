@@ -4,7 +4,8 @@
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;   
+    background-color: rgb(207, 225, 248);
 }
 
 header,
@@ -36,7 +37,7 @@ fieldset {
 fieldset hr {
     width: 100%;
     border: 2px solid black;
-    margin: 0.5em 0 0 0;
+    margin: 1em 0 0 0;
 }
 
 footer{
@@ -89,7 +90,7 @@ form textarea:focus {
             text-transform: uppercase;
             font-weight: 600;
             font-size: x-large;
-            background-color: thistle;
+            background-color: rgb(145, 184, 197);
             width:100%;
         }
             .sub-header{
@@ -216,6 +217,11 @@ form textarea:focus {
             margin-right: .5em;
         }
 
+        button {
+            margin: 1.5em 0 1.5em 0;
+            width:100%;
+        }
+
     footer span{
         flex: auto;
     }
@@ -262,16 +268,17 @@ form textarea:focus {
     }
 
     .sub-header h2{
-        margin-top: 2em;
+        margin-top: 2.5em;
     }
 
     fieldset hr {
-        margin: 1.5em 0 0 0;
+        margin: 2em 0 1em 0;
     }
 
     button {
-        margin: 1.5em 0 2em 0;
+        margin-bottom: 2em;
     }
+ 
 
     button:hover {
         transform: scale(1.2);
