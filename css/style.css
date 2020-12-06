@@ -18,26 +18,72 @@ fieldset,
 footer {
     display: flex;
 }
+    fieldset,
+    .newsletter {
+        flex-direction: column;
+    }
 
-.sub-header hr {
-    border: 2px solid black;
-    border-top: 5px solid black;
-    border-left: 0;
-    border-right: 0;
-    height: .2em;
-    margin: 1em 0 1.5em 0;
+header h1{
+    justify-content: center;
+    display: flex;
+    padding: 1em 0 1em 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: x-large;
+    background-color: rgb(145, 184, 197);
+    width:100%;
 }
+    .sub-header{
+        text-align: center;
+    }
+    .sub-header p {
+        color: rgb(194, 194, 194);
+        margin-bottom: 3em;
+    }
+    .sub-header h2 {
+        margin-top: 1.5em;
+    }
+    .sub-header hr {
+        border: 2px solid black;
+        border-top: 5px solid black;
+        border-left: 0;
+        border-right: 0;
+        height: .2em;
+        margin: 1em 0 1.5em 0;
+    }
+
+form {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+    form legend{
+        margin: 1em 0 1em 0;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+    form label{
+        color: grey;
+        display: block;
+    }
 
 fieldset {
     border: 0;
     padding: 0;
     margin-top:2em;
 }
+    fieldset p {
+        margin-bottom: .5em;
+    }
+    fieldset hr {
+        width: 100%;
+        border: 2px solid black;
+        margin: 1em 0 0 0;
+    }
 
-fieldset hr {
-    width: 100%;
-    border: 2px solid black;
-    margin: 1em 0 0 0;
+.select_newsletter ul,
+.newsletter_format ul {
+    margin: 1em 0 1em 0;
 }
 
 footer{
@@ -46,16 +92,22 @@ footer{
     color: grey;
 }
 
-button{
-    max-width: 764px;
+footer span{
+    flex: auto;
 }
 
-select {
-    -webkit-appearance: none;
-    appearance: none;
-}
 
 /* Input Styling */
+
+.groupies label,
+.groupies input,
+.groupies select,
+.groupies .select-icon1,
+.groupies .select-icon2{
+    display: block;
+    width: 100%;
+}
+
 input[name="contact_information"]::placeholder {
     text-align:right;
     color:rgb(175, 174, 174);
@@ -74,54 +126,12 @@ form textarea:focus {
     outline: 0;
 }
 
-
-/* MOBILE View Port @360px */
-@media (min-width: 360px) {
-
-    form {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-        header h1{
-            justify-content: center;
-            display: flex;
-            padding: 1em 0 1em 0;
-            margin: 0;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: x-large;
-            background-color: rgb(145, 184, 197);
-            width:100%;
-        }
-            .sub-header{
-                text-align: center;
-            }
-            .sub-header p {
-                color: rgb(194, 194, 194);
-                margin-bottom: 3em;
-            }
-            .sub-header h2 {
-                margin-top: 1.5em;
-            }
-
-        fieldset p {
-            margin-bottom: .5em;
-        }
-        form legend{
-            margin: 1em 0 1em 0;
-            font-size: 1.5em;
-            font-weight: 600;
-        }
-        form label{
-            color: grey;
-            display: block;
-        }
-    
-    input[type="name"],
+input[type="name"],
     input[type="email"],
     input[type="tel"],
     input[type="text"],
-    select {
+    select,
+    textarea {
         border-radius: 5px;
         height: 4em;
         padding: 5px 10px 5px 10px;
@@ -129,103 +139,72 @@ form textarea:focus {
         border: 0;
     }
 
-    .select-icon1{
-        position: relative;
+input[id="zip_code"] {
+    width: 50%;
+}
+
+input,
+select{
+    margin-bottom: 1em;
+    margin-top: .5em;
+}
+
+.select-icon1{
+    position: relative;
+}
+
+.select-icon2{
+    position: relative;
+}
+    .select-icon1::after{
+        content: "▼";
+        font-size: 0.8rem;
+        top: 32px;
+        right: 10px;
+        position: absolute;
+        color:grey;
+        pointer-events: none;
     }
-    
-    .select-icon2{
-        position: relative;
-    }
-        .select-icon1::after{
-            content: "▼";
-            font-size: 0.8rem;
-            top: 32px;
-            right: 10px;
-            position: absolute;
-            color:grey;
-            pointer-events: none;
-        }
-        .select-icon2::after{
-            content: "▲";
-            font-size: 0.8rem;
-            top: 16px;
-            right: 10px;
-            position: absolute;
-            color:grey;
-            pointer-events: none;
-        }
-    
-    input,
-    select,
-    textarea {
-        background-color: rgb(230, 230, 230);
-        border: 0;
-        border-radius: 5px;
-    }
-    fieldset,
-    .newsletter {
-        flex-direction: column;
+    .select-icon2::after{
+        content: "▲";
+        font-size: 0.8rem;
+        top: 16px;
+        right: 10px;
+        position: absolute;
+        color:grey;
+        pointer-events: none;
     }
 
-    .groupies label,
-    .groupies input,
-    .groupies select,
-    .groupies .select-icon1,
-    .groupies .select-icon2{
-        display: block;
-        width: 100%;
-    }
+textarea {
+    height: 7em;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    margin-top: 1em;
+}
 
-    input[id="zip_code"] {
-        width: 50%;
-    }
+li  input{
+    margin-right: .5em;
+}
 
-    input,
-    select{
-        margin-bottom: 1.5em;
-        margin-top: .5em;
-    }
+button {
+    border: 0;
+    background-color: rgb(86, 157, 250);
+    border-radius: 5px;
+    color: white;
+    margin: 1.5em 0 1.5em 0;
+    height: 3em;
+    font-size: x-large;
+    transition: .3s ease;
+    width:100%;
+}
 
-    textarea {
-        height: 7em;
-        width: 100%;
-        padding: 5px 10px 5px 10px;
-        margin-top: 1em;
-    }
-
-    button {
-        border: 0;
-        background-color: rgb(86, 157, 250);
-        border-radius: 5px;
-        color: white;
-        margin: 1.5em 0 1.5em 0;
-        height: 3em;
-        font-size: x-large;
-        transition: .3s ease;
-
-    }
-
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
     select:invalid { 
         color:rgb(175, 174, 174);
     }
-
-    .select_newsletter ul,
-    .newsletter_format ul {
-        margin: 1em 0 1em 0;
-    }
-        li  input{
-            margin-right: .5em;
-        }
-
-        button {
-            margin: 1.5em 0 1.5em 0;
-            width:100%;
-        }
-
-    footer span{
-        flex: auto;
-    }
-}
 
 /* DESKTOP View Port @768px */
 @media (min-width: 768px) {
@@ -234,6 +213,10 @@ form textarea:focus {
     footer{
         max-width: 768px;
         margin: 0 auto;
+    }
+
+    form {
+        padding: 0 1em 0 1em;
     }
 
     .select-icon1::after{
